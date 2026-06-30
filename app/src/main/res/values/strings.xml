@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Journal de Sport</string>
+    <string name="nouvelle_seance">Nouvelle Séance</string>
+    <string name="ajouter_exercice">Ajouter un exercice</string>
+    <string name="nom_exercice">Nom de l\'exercice</string>
+    <string name="series">Séries</string>
+    <string name="repetitions">Répétitions</string>
+    <string name="poids">Poids (kg)</string>
+    <string name="terminer">Terminer la séance</string>
+    <string name="historique">Historique des séances</string>
+    <string name="aucune_seance">Aucune séance pour l\'instant.\nAppuyez sur + pour commencer !</string>
+    <string name="detail_seance">Détail de la séance</string>
+    <string name="statistiques">Statistiques</string>
+    <string name="note_seance">Note / Ressenti</string>
+    <string name="supprimer">Supprimer</string>
+    <string name="confirmer">Confirmer</string>
+    <string name="annuler">Annuler</string>
+</resources>

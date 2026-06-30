@@ -1,0 +1,17 @@
+<resources>
+    <style name="Theme.SportJournal"
+        parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="android:colorBackground">@color/background</item>
+    </style>
+
+    <!-- Style carte séance -->
+    <style name="CardSeance">
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+</resources>

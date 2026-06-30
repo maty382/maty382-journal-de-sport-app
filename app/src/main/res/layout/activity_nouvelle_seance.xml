@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:title="Nouvelle Séance"
+        android:titleTextColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- CHRONOMÈTRE -->
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/chrono_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DURÉE DE LA SÉANCE"
+                        android:textSize="11sp"
+                        android:textColor="#80FFFFFF"
+                        android:letterSpacing="0.1"/>
+
+                    <TextView
+                        android:id="@+id/tv_chrono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00:00"
+                        android:textSize="48sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="monospace"
+                        android:layout_marginTop="8dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp">
+
+                        <Button
+                            android:id="@+id/btn_start_pause"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="▶ Démarrer"
+                            android:backgroundTint="@color/green_success"
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="8dp"/>
+
+                        <Button
+                            android:id="@+id/btn_reset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="↺ Reset"
+                            android:backgroundTint="#444444"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- NOTE DE SÉANCE -->
+            <com.google.android.material.textfield.TextInputLayout
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Note / Ressenti (facultatif)"
+                app:boxBackgroundColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_note_seance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TITRE SECTION EXERCICES -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EXERCICES"
+                android:textSize="12sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- FORMULAIRE EXERCICE -->
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nom de l'exercice"
+                        android:layout_marginBottom="8dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_nom_exercice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Séries"
+                            android:layout_marginEnd="6dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_series"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Reps"
+                            android:layout_marginEnd="6dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_reps"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Poids (kg)">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_poids"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_ajouter_exercice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+ Ajouter cet exercice"
+                        android:backgroundTint="@color/primary"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Liste exercices ajoutés -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_exercices_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bouton terminer -->
+    <Button
+        android:id="@+id/btn_terminer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="✓ Terminer la séance"
+        android:backgroundTint="@color/green_success"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_margin="0dp"/>
+
+</LinearLayout>

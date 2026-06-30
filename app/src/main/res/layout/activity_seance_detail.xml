@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:title="Détail de la séance"
+        android:titleTextColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Carte résumé séance -->
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_detail_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="15 Janvier 2024"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_detail_duree"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="⏱ 45min"
+                            android:textSize="14sp"
+                            android:textColor="#CCFFFFFF"/>
+
+                        <TextView
+                            android:id="@+id/tv_detail_nb_exercices"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="💪 5 exercices"
+                            android:textSize="14sp"
+                            android:textColor="#CCFFFFFF"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_detail_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📝 Bonne séance"
+                        android:textSize="14sp"
+                        android:textColor="#CCFFFFFF"
+                        android:textStyle="italic"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Titre section exercices -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EXERCICES"
+                android:textSize="12sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- RecyclerView des exercices (imbriqué) -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_exercices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

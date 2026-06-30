@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#F8F9FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Icône exercice -->
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="🏋️"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <!-- Infos exercice -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tv_exercice_nom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:text="Squat"/>
+
+            <TextView
+                android:id="@+id/tv_exercice_resume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/primary"
+                android:layout_marginTop="2dp"
+                android:text="4 × 12 @ 80.0 kg"/>
+
+        </LinearLayout>
+
+        <!-- Volume -->
+        <TextView
+            android:id="@+id/tv_exercice_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/green_success"
+            android:textStyle="bold"
+            android:text="Volume: 3840 kg"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

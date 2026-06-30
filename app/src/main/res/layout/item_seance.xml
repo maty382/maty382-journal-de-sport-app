@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/card_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Bande + boutons Modifier / Supprimer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:background="@color/primary"/>
+
+            <!-- Espace flexible -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <!-- Bouton Modifier -->
+            <TextView
+                android:id="@+id/btn_modifier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✏ Modifier"
+                android:textSize="12sp"
+                android:textColor="@color/primary"
+                android:padding="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- Séparateur -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:background="@color/text_secondary"/>
+
+            <!-- Bouton Supprimer -->
+            <TextView
+                android:id="@+id/btn_supprimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🗑 Supprimer"
+                android:textSize="12sp"
+                android:textColor="@color/red_delete"
+                android:padding="6dp"
+                android:layout_marginStart="6dp"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tv_seance_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"/>
+
+        <!-- Durée -->
+        <TextView
+            android:id="@+id/tv_seance_duree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Exercices -->
+        <TextView
+            android:id="@+id/tv_seance_exercices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Note -->
+        <TextView
+            android:id="@+id/tv_seance_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/orange_warning"
+            android:textStyle="italic"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
