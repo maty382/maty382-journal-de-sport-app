@@ -11,7 +11,7 @@ Application Android native permettant de suivre ses entraînements sportifs au q
 
 ## 🛠️ Stack technique
 
-- **Langage** : Kotlin
+- **Langage** : Java
 - **IDE** : Android Studio
 - **Build system** : Gradle (Kotlin DSL)
 
